@@ -1,0 +1,116 @@
+body {
+    background-color: #ffffff;
+    background-image: url("Assets/crumpledPaper.jpg");
+    background-size: 1000px;
+    font-family: "Gaegu";
+    margin: 0;
+    padding: 0;
+}
+
+.piece {
+    position: relative;
+    left: 0.8vmin;
+    top: 0.5vmin;
+    width: 80%;
+    height: 80%;
+    transition: .2s;
+    z-index: 5;
+}
+
+td:hover .piece {
+    transform: scale(1.2)
+}
+
+#black {
+    filter: brightness(60%);
+}
+
+#titleText {
+    text-align: center;
+    margin: 0px;
+    font-size: 6vmin;
+}
+
+#selector {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#check {
+    color: red;
+    text-align: center;
+    margin: 0px;
+    font-size: 3.5vmin;
+}
+
+#turnIndicator {
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 3.5vmin;
+}
+
+#board {
+    position: relative;
+    background-color: #1f2227;
+    width: 70vmin;
+    height: 70vmin;
+    border-spacing: 0.5vmin;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    font-size: 3vmin;
+}
+
+#board td {
+    position: relative;
+    height: 8.75vmin;
+    max-height: 8.75vmin;
+    width: 8.75vmin;
+    padding: 0;
+    margin: 0;
+}
+
+#board th {
+    padding: 0px;
+    text-align: center;
+    width: 4vmin;
+    height: 4vmin;
+    background-image: url("Assets/veryLightSquare.png");
+    background-size: cover;
+}
+
+#bottomCoord th {
+    height: 4vmin;
+}
+
+#board tr td div {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+#board tr:nth-child(even) td:nth-child(even) {
+    background-image: url("Assets/lightSquare.png");
+    background-size: cover;
+}
+
+#board tr:nth-child(odd) td:nth-child(even) {
+    background-image: url("Assets/darkSquare.png");
+    background-size: cover;
+}
+
+#board tr:nth-child(odd) td:nth-child(odd) {
+    background-image: url("Assets/lightSquare.png");
+    background-size: cover;
+}
+
+#board tr:nth-child(even) td:nth-child(odd) {
+    background-image: url("Assets/darkSquare.png");
+    background-size: cover;
+}
